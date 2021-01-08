@@ -163,7 +163,7 @@ function noteForm(post, $postCard) {
     $messageInput.placeholder= "post a note"
 
     $noteSubmit.type= "submit"
-    $noteSubmit.placeholder = "Post"
+    $noteSubmit.value = "Post"
 
     $postCard.append($notesSection, $noteFormSection)
     $noteFormSection.append($noteForm)

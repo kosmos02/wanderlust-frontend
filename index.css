@@ -23,6 +23,8 @@ header {
     padding-bottom: .5rem;
     border-radius: 50px;
     margin-bottom: 3rem;
+    margin-left: 30px;
+    margin-right: 30px;
     box-shadow: 2px 2px 20px rgb(155, 155, 42) 
     
 }
@@ -56,6 +58,26 @@ header {
     color: rgb(94, 94, 21);
 }
 
+#name-field {
+    margin-right: 5px;
+}
+
+#location-field {
+    margin-right: 5px;
+}
+
+#date-field {
+    margin-right: 5px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+#post-submit {
+    margin-top: 15px
+}
+
 #Lat {
     margin-left: 2rem;
 }
@@ -86,7 +108,11 @@ header {
 }
 
 .divCard:hover .delete-post-button {
-    color: rgb(80, 80, 20);
+    color: red;
+}
+
+.divCard:hover .note-name {
+    color: rgb(26, 118, 146);
 }
 
 .messages {
@@ -96,7 +122,8 @@ header {
 .card-info {
     margin: 1px;
     margin-left: 5px;
-    font-size: 15px; 
+    font-size: 15px;
+    color: rgb(114, 114, 69);
 }
 
 #post-cards {
@@ -144,6 +171,7 @@ header {
     font-weight: bold;
     display:flex;
     justify-content: space-between;
+    transition: 0.7s;
 }
 
 .note-message {
