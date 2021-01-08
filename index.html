@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/tD5bs36/android-chrome-512x512.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="index.css">
+
+    
+</head>
+<body>
+    <header>Wanderlust<img id="globe-feather" src="https://i.ibb.co/JCjQWHZ/globe-feather.png" alt="globe-feather"></header>
+    <section id="map-data">
+    <p id="map-instructions">Pick a spot on the map to throw a pin...</p>
+    <div id="mapid"></div>
+
+    <form id="input-form">
+        <input id= "name-field" type="text" name= "name" placeholder= "name">
+        <input id= "location-field" type="text" name="location" placeholder= "location">
+        <input type="date" id="date-field" name="date" value="date" min="2021-01-01" max="2025-12-31">
+        <label for="post-submit" style="color: rgb(97, 97, 4); font-weight: 900;">Then hit submit!</label>
+        <input id="post-submit" type="submit" placholder= "Add Wander">
+        
+        <span class="LatLng"><p>Lat: <p id="Lat"></p></span>
+        <span class="LatLng"><p >Lng: <p id="Lng"></p></span>
+    </form>
+    </section>
+    <section id="post-cards">
+
+    </section>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="index.js"></script>
+</body>
+</html>

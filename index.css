@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+body {
+    background-color: lightyellow;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 50px;
+    font-family: "Cinzel Decorative", "Times New Roman";
+}
+
+#globe-feather {
+    height: 75px;
+}
+
+#map-data {
+    background-color: rgb(248, 219, 105);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 50px;
+    margin-bottom: 3rem;
+    box-shadow: 2px 2px 20px rgb(155, 155, 42) 
+    
+}
+
+#map-instructions {
+    margin-left: 5rem;
+    font-weight: 900;
+    color: rgb(97, 97, 4);
+}
+
+#mapid { 
+    height: 350px;
+    margin: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 175px;
+}
+
+.leaflet-control {
+    position: relative;
+    top: 120px;
+}
+
+#input-form {
+    margin: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+.LatLng {
+    color: rgb(94, 94, 21);
+}
+
+#Lat {
+    margin-left: 2rem;
+}
+
+#Lng {
+    margin-left: 2rem;
+}
+
+.divCard {
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem;
+    background-color: rgb(193, 193, 137) ;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgb(85, 84, 23);
+    transition: 0.7s;
+}
+
+.divCard:hover {
+    background-color: rgb(248, 219, 105);
+}
+
+.divCard:hover .x-note-button {
+    color: rgb(243, 172, 172);
+}
+
+.divCard:hover .delete-post-button {
+    color: rgb(80, 80, 20);
+}
+
+.messages {
+    height: 300px;
+}
+
+.card-info {
+    margin: 1px;
+    margin-left: 5px;
+    font-size: 15px; 
+}
+
+#post-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: rgb(80, 80, 20);
+
+}
+
+.name-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+}
+
+.delete-post-button {
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: 0.7s;
+}
+
+#name-message-field {
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#message-field {
+    width: 11.5rem;
+    background-color: lightyellow;
+    border: none;
+
+}
+
+.note-name {
+    display: flex;
+    color: red;
+    font-weight: bold;
+    display:flex;
+    justify-content: space-between;
+}
+
+.note-message {
+    color: rgb(97, 92, 26);
+    font-weight: normal;
+}
+
+#post-submit {
+    background-color: rgb(114, 114, 69);
+    color: rgb(241, 241, 146);
+    cursor: pointer;
+}
+
+.note-submit {
+    background-color: rgb(114, 114, 69);
+    color: rgb(241, 241, 146);
+    cursor: pointer;
+}
+
+.x-note-button {
+    position: relative;
+    bottom: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
+    color: rgb(212, 212, 175);
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+
+
+
