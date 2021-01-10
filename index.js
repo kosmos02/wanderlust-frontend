@@ -7,6 +7,7 @@ const $lng = document.querySelector('#Lng')
 const $name = document.querySelector('#name-field')
 const $postCards = document.querySelector('#post-cards')
 const $form= document.querySelector('#input-form')
+const $location= document.querySelector('#location-field')
 const $deleteButtons = document.querySelectorAll('.delete-card')
 
 const baseURL="http://localhost:3000/"
@@ -38,6 +39,16 @@ function onMapClick(e) {
     
     $lat.textContent = e.latlng.lat
     $lng.textContent = e.latlng.lng
+
+    const filters1= "country|administrative_area_level_1|colloquial_area|locality|natural_feature|airport|point_of_interest"
+    const filters2= "country|locality"
+    
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${e.latlng.lat},${e.latlng.lng}&result_type=${filters2}&key=AIzaSyBzaLAk-UDpkTvnFXOZIJehm0bKglvJQpM`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.results[0].formatted_address)
+            $location.value = data.results[0].formatted_address
+        })
 }
 
 $form.addEventListener("submit", event => {
@@ -122,8 +133,6 @@ function deleteCard(appendTo, destroyThis, id){
 
     appendTo.append($deletePost)
 
-    console.log($selectMarker)
-
     $deletePost.addEventListener('click', () => {
         $selectMarker.remove()
         destroyCard(destroyThis)
@@ -177,8 +186,6 @@ function postNote(post, $noteForm) {
     $noteForm.addEventListener('submit', event => {
         event.preventDefault()
 
-        console.log(event.target)
-
         const noteFormData = new FormData(event.target)
         const name = noteFormData.get('name')
         const message = noteFormData.get('message')
@@ -202,7 +209,6 @@ function postNote(post, $noteForm) {
         })
             .then(response => response.json())
             .then(note => {
-                console.log(note)
                 createNote(note)
                 deleteNote(note)
             })
