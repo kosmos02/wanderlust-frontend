@@ -78,6 +78,15 @@ label {
     margin-top: 15px
 }
 
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
 #Lat {
     margin-left: 2rem;
 }

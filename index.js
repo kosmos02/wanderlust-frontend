@@ -9,6 +9,7 @@ const $postCards = document.querySelector('#post-cards')
 const $form= document.querySelector('#input-form')
 const $location= document.querySelector('#location-field')
 const $deleteButtons = document.querySelectorAll('.delete-card')
+const errorMessage = document.querySelector('.error-message')
 
 const baseURL="http://localhost:3000/"
 const postURL="posts/"
@@ -75,8 +76,18 @@ $form.addEventListener("submit", event => {
         },
         body: JSON.stringify(postData)
     }).then(response => response.json())
-        .then(post => {
-            createCard(post)
+        .then(result => {
+            if (result.errors) {
+                console.log(result.errors)
+                throw new Error(result.errors[0])
+            } else {
+                errorMessage.classList.add('hidden')
+                createCard(result)
+            }
+        })
+        .catch(error => {
+            errorMessage.textContent = error.message
+            errorMessage.classList.remove('hidden')
         })
 })
 
