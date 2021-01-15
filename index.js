@@ -10,8 +10,9 @@ const $form= document.querySelector('#input-form')
 const $location= document.querySelector('#location-field')
 const $deleteButtons = document.querySelectorAll('.delete-card')
 const errorMessage = document.querySelector('.error-message')
+const logout = document.querySelector('#logout')
 
-const baseURL="http://localhost:3000/"
+const baseURL="https://wanderlust-maps.herokuapp.com/"
 const postURL="posts/"
 const noteURL= "notes/"
 
@@ -269,3 +270,7 @@ function deleteNote(note) {
         })
     })
 }
+
+logout.addEventListener('click', () => {
+    localStorage.removeItem('token')
+})
