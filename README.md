@@ -4,6 +4,10 @@
 
 Many avid and prospectful travelers have a bucketlist "visionboard" or map of places they aspire to visit. Wanderlust replicates this visioboard with a map you can place a pin on. Along with this, you can add information to the pin such as your name, the name of the location, and the date you're imaginging visiting. A post generates that you or your friends can make notes and comment on.
 
+Check out my blog I made after completing this project on reverse geocoding-
+
+*https://alexandermgabriel.medium.com/using-leaflet-coordinates-with-google-maps-reverse-geocoding-api-35e04826798a
+
 * https://github.com/kosmos02/wanderlust-backend
 
 ## Technologies Used ##

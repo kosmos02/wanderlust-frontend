@@ -12,6 +12,8 @@ const $deleteButtons = document.querySelectorAll('.delete-card')
 const errorMessage = document.querySelector('.error-message')
 const logout = document.querySelector('#logout')
 
+const key = config
+
 const baseURL="https://wanderlust-maps.herokuapp.com/"
 const postURL="posts/"
 const noteURL= "notes/"
