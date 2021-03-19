@@ -12,7 +12,7 @@ const $deleteButtons = document.querySelectorAll('.delete-card')
 const errorMessage = document.querySelector('.error-message')
 const logout = document.querySelector('#logout')
 
-const key = config
+// const key = config
 
 const baseURL="https://wanderlust-maps.herokuapp.com/"
 const postURL="posts/"
@@ -24,7 +24,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'pk.eyJ1Ijoia29zbW9zMDIiLCJhIjoiY2tqajBnbnQxNHp1ZTJzcGs2eGl2ZTB2OCJ9.sN_ykILGCbjf6ZkobZ80wg'
+    accessToken: 'pk.eyJ1Ijoia29zbW9zMDIiLCJhIjoiY2tsd3RtenplMTVmdTJ1czU5dzhrbm43bSJ9.AQwiVw0PznwuKIIyftkQKw'
 }).addTo(mymap);
 
 fetch(`${baseURL}${postURL}`)
